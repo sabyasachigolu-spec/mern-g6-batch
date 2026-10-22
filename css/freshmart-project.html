@@ -163,7 +163,7 @@
         display: grid;
         row-gap: 20px;
         grid-template-columns: repeat(5, 1fr);
-        
+
         margin-top: 10px;
     }
 
@@ -205,9 +205,89 @@
         font-weight: 700;
     }
 
-    .grid-main-container{
+    .grid-main-container {
         padding: 20px 50px;
         background-color: rgb(238, 236, 236);
+    }
+
+    @media (max-width:600px) {
+        nav {
+            display: grid;
+            grid-template-areas: "logo navItems" "searchInput searchInput";
+            padding: 10px 20px;
+            height: auto;
+            row-gap: 10px;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .nav-items {
+            grid-area: navItems;
+            gap: 10px;
+        }
+
+        .input {
+            grid-area: searchInput;
+            width: 100%;
+        }
+
+        .hero-wrapper{
+            padding: 100px 0 20px 0;
+            
+        }
+
+        .hero{
+            margin: 0 10px;
+            height: auto;
+            flex-direction: column;
+            padding: 50px 20px;
+        }
+
+        .hero-image{
+            font-size: 100px;
+            text-align: center;
+        }
+        .hero-text h1{
+            font-size: 40px;
+        }
+        .hero-text p {
+            font-size: 20px;
+        }
+
+        .hero-text button {
+            font-size: 18px;
+        }
+
+        .category{
+            padding: 20px ;
+        }
+
+        .cat-items{
+            width: 100%;
+            gap: 20px;
+            overflow: scroll;
+        }
+
+        .grid-container{
+            grid-template-columns: 1fr;
+        }
+
+        .grid-box {
+            width: 100%;
+            height: 350px;
+        }
+
+        .grid-main-container{
+            padding: 20px;
+        }
+        .image-name{
+            font-size: 28px;
+        }
+        .image-price {
+            font-size: 28px;
+        }
     }
 </style>
 
@@ -280,7 +360,7 @@
             <div class="grid-container">
                 <div class="grid-box">
                     <div class="img-cont">🍎</div>
-                    <p class="image-name">Apple</p>
+                    <p class="image-name">Fresh Apples</p>
                     <p class="image-price">₹120 / kg</p>
 
                 </div>
